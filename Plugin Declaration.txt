@@ -3,9 +3,9 @@
 
 $("#cbo").ikrLoadfSelectCombo({
                 List: myList,
-                DisplayText: "Name",
+                DisplayText: "Name", //Display Property name
                 OtherProperties: "Id,Name", //OtherProperties means those properties of object that we need for use
-                PrimaryKey: "StudentId", //PrimaryKey
+                PrimaryKey: "Id", //PrimaryKey
             });
 
 -----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ $("#cbo").ikrLoadfSelectCombo({
 
 $("#cbo").ikrGetValuefSelectCombo({
                 PrimaryKey: "Id",
-                DataValue: "Name",
+                DataValue: "Name",  //Display Property name
                 ReturnProperties: "Id,Name",
                 IsReturnSingleValue: false
             }, function (response) {
