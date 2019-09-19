@@ -1,0 +1,47 @@
+1. Load whole list into DropDownList :
+---------------------------------
+
+$("#cbo").ikrLoadfSelectCombo({
+                List: myList,
+                DisplayText: "Name",
+                OtherProperties: "Id,Name", //OtherProperties means those properties of object that we need for use
+                PrimaryKey: "StudentId", //PrimaryKey
+            });
+
+-----------------------------------------------------------------------------
+
+2. Get selected items from DropDownList :
+---------------------------------------
+
+$("#cbo").ikrGetValuefSelectCombo({
+                PrimaryKey: "Id",
+                DataValue: "Name",
+                ReturnProperties: "Id,Name",
+                IsReturnSingleValue: false
+            }, function (response) {
+                if (response.status && response.obj != null) {
+                    var selectedItemList = response.obj;
+                }
+            });
+
+
+3. Set value of multiple items in DropDownList :
+----------------------------------------------
+
+$("#cbo").ikrSetValuefSelectCombo({
+                List: myList,
+                MatchField: "Name" // MatchField means that property which is used as option's text in DropDownList
+            });
+
+
+
+4. Uncheck (Reset) all items of DropDownList : $("#cbo").ikrResetfSelectCombo();
+--------------------------------------------
+
+5. Remove all items from DropDownList : $("#cbo").ikrRemoveAllfSelectOptions();
+-------------------------------------
+
+
+
+
+
